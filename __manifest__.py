@@ -7,8 +7,8 @@
     'author': 'ALPHAQUEB CONSULTING SAS',
     'depends': ['purchase', 'purchase_requisition'],
     'data': [
-        'security/ir.model.access.csv',
-        'security/purchase_visibility_security.xml',
+        'security/purchase_visibility_security.xml',  
+        'security/ir.model.access.csv',              
     ],
     'installable': True,
     'application': False,
