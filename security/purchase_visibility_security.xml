@@ -2,7 +2,7 @@
     <!-- Definir un nuevo grupo para usuarios con visibilidad restringida -->
     <record id="group_purchase_own_orders" model="res.groups">
         <field name="name">Purchase Own Orders</field>
-        <field name="category_id" ref="base.module_category_purchase_management"/>
+        <field name="category_id" ref="base.module_category_purchases"/>
         <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
     </record>
 
