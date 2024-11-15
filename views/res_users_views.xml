@@ -7,7 +7,7 @@
             <xpath expr="//form/sheet/notebook" position="inside">
                 <page string="Purchase Visibility" groups="purchase_visibility.group_purchase_additional_visibility">
                     <group>
-                        <field name="additional_visible_users" 
+                        <field name="additional_visible_users"
                                widget="many2many_tags"
                                domain="[('share', '=', False)]"/>
                     </group>

@@ -3,6 +3,8 @@
         <field name="name">purchase.requisition.form.custom</field>
         <field name="model">purchase.requisition</field>
         <field name="arch" type="xml">
+            <!-- Puedes eliminar o comentar este bloque si el campo ya no es necesario -->
+            <!--
             <form>
                 <sheet>
                     <group>
@@ -10,6 +12,7 @@
                     </group>
                 </sheet>
             </form>
+            -->
         </field>
     </record>
 </odoo>
