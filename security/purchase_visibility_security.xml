@@ -6,11 +6,20 @@
         <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
     </record>
 
+    <!-- Grupo que permite agregar usuarios adicionales -->
+    <record id="group_purchase_additional_visibility" model="res.groups">
+        <field name="name">Add Additional Visibility</field>
+        <field name="category_id" ref="base.module_category_purchases"/>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+    </record>
+
     <!-- Regla para visibilidad de Órdenes de Compra -->
     <record id="purchase_order_visible_rule" model="ir.rule">
         <field name="name">Purchase Orders Visibility</field>
         <field name="model_id" ref="purchase.model_purchase_order"/>
-        <field name="domain_force">['|', ('create_uid', '=', user.id), ('additional_visible_users', 'in', [user.id])]</field>
+        <field name="domain_force">
+            ['|', ('create_uid', '=', user.id), ('additional_visible_users', 'in', [user.id])]
+        </field>
         <field name="groups" eval="[(4, ref('purchase_visibility.group_purchase_own_orders'))]"/>
     </record>
 
@@ -18,7 +27,9 @@
     <record id="purchase_requisition_visible_rule" model="ir.rule">
         <field name="name">Purchase Requisitions Visibility</field>
         <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
-        <field name="domain_force">['|', ('create_uid', '=', user.id), ('additional_visible_users', 'in', [user.id])]</field>
+        <field name="domain_force">
+            ['|', ('create_uid', '=', user.id), ('additional_visible_users', 'in', [user.id])]
+        </field>
         <field name="groups" eval="[(4, ref('purchase_visibility.group_purchase_own_orders'))]"/>
     </record>
 </odoo>

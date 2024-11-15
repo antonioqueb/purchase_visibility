@@ -5,5 +5,6 @@ class PurchaseRequisition(models.Model):
 
     additional_visible_users = fields.Many2many(
         'res.users', 
-        string="Usuarios Adicionales con Visibilidad"
+        string="Usuarios Adicionales con Visibilidad",
+        help="Usuarios adicionales que tendrán visibilidad de esta solicitud."
     )
