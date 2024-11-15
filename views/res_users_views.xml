@@ -5,12 +5,13 @@
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
             <xpath expr="//form/sheet/notebook" position="inside">
-                <group string="Purchase Visibility">
-                    <field name="groups_id" widget="many2many_tags"/>
-                    <field name="additional_visible_users" 
-                           domain="[('share', '=', False)]"
-                           groups="purchase_visibility.group_purchase_additional_visibility"/>
-                </group>
+                <page string="Purchase Visibility" groups="purchase_visibility.group_purchase_additional_visibility">
+                    <group>
+                        <field name="additional_visible_users" 
+                               widget="many2many_tags"
+                               domain="[('share', '=', False)]"/>
+                    </group>
+                </page>
             </xpath>
         </field>
     </record>
