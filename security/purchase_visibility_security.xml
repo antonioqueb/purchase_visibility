@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- Grupo para usuarios con visibilidad restringida -->
     <record id="group_purchase_own_orders" model="res.groups">
@@ -17,9 +18,7 @@
     <record id="purchase_order_visible_rule" model="ir.rule">
         <field name="name">Purchase Orders Visibility</field>
         <field name="model_id" ref="purchase.model_purchase_order"/>
-        <field name="domain_force">
-            ['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]
-        </field>
+        <field name="domain_force">['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]</field>
         <field name="groups" eval="[(4, ref('purchase_visibility.group_purchase_own_orders'))]"/>
     </record>
 
@@ -27,9 +26,7 @@
     <record id="purchase_requisition_visible_rule" model="ir.rule">
         <field name="name">Purchase Requisitions Visibility</field>
         <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
-        <field name="domain_force">
-            ['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]
-        </field>
+        <field name="domain_force">['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]</field>
         <field name="groups" eval="[(4, ref('purchase_visibility.group_purchase_own_orders'))]"/>
     </record>
 </odoo>
