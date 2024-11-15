@@ -8,7 +8,7 @@
                 <group string="Purchase Visibility">
                     <field name="groups_id" widget="many2many_tags" domain="[('category_id', '=', ref('base.module_category_purchases'))]"/>
                     <field name="additional_visible_users" 
-                           invisible="not any(group.id == ref('purchase_visibility.group_purchase_additional_visibility') for group in groups_id)"/>
+                           invisible="not user.has_group('purchase_visibility.group_purchase_additional_visibility')"/>
                 </group>
             </xpath>
         </field>
