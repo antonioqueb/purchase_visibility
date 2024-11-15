@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_purchase_order_additional,Purchase Order Additional Access,purchase.model_purchase_order,purchase_visibility.group_purchase_own_orders,1,1,1,0
 access_purchase_requisition_additional,Purchase Requisition Additional Access,purchase_requisition.model_purchase_requisition,purchase_visibility.group_purchase_own_orders,1,1,1,0
 access_res_users_additional,Res Users Additional Access,base.model_res_users,purchase_visibility.group_purchase_additional_visibility,1,1,0,0
+access_res_users_own_orders,Res Users Own Orders Access,base.model_res_users,purchase_visibility.group_purchase_own_orders,1,0,0,0
