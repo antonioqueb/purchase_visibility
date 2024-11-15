@@ -21,7 +21,7 @@
         <field name="domain_force">
             ['|', 
              ('create_uid', '=', user.id), 
-             '&', 
+             '&amp;', 
              ('create_uid.additional_visible_users', 'in', user.id),
              ('create_uid', '!=', 1)]
         </field>
@@ -35,7 +35,7 @@
         <field name="domain_force">
             ['|', 
              ('create_uid', '=', user.id), 
-             '&', 
+             '&amp;', 
              ('create_uid.additional_visible_users', 'in', user.id),
              ('create_uid', '!=', 1)]
         </field>
