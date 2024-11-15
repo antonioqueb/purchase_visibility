@@ -1,15 +1,15 @@
 <odoo>
-    <record id="view_purchase_requisition_form_inherit" model="ir.ui.view">
-        <field name="name">purchase.requisition.form.inherit</field>
+    <record id="view_purchase_requisition_form_custom" model="ir.ui.view">
+        <field name="name">purchase.requisition.form.custom</field>
         <field name="model">purchase.requisition</field>
-        <!-- Cambia el ID por una vista válida o elimina este atributo si se trata de una nueva vista -->
-        <field name="inherit_id" ref="purchase_requisition.purchase_requisition_tree_view"/> 
         <field name="arch" type="xml">
-            <xpath expr="//sheet" position="inside">
-                <group>
-                    <field name="additional_visible_users" widget="many2many_tags"/>
-                </group>
-            </xpath>
+            <form>
+                <sheet>
+                    <group>
+                        <field name="additional_visible_users" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 </odoo>
