@@ -4,10 +4,11 @@
         <field name="model">res.users</field>
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//group[@name='preferences']" position="inside">
-                <group name="purchase_visibility">
-                    <field name="groups_id" widget="many2many_tags" domain="[('id', '=', ref('purchase_visibility.group_purchase_additional_visibility'))]"/>
-                    <field name="additional_visible_users" attrs="{'invisible': [('groups_id', 'not in', [ref('purchase_visibility.group_purchase_additional_visibility')])]}"/>
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <group string="Purchase Visibility">
+                    <field name="groups_id" widget="many2many_tags" domain="[('category_id', '=', ref('base.module_category_purchases'))]"/>
+                    <field name="additional_visible_users" 
+                           attrs="{'invisible': [('groups_id', 'not in', [ref('purchase_visibility.group_purchase_additional_visibility')])]}"/>
                 </group>
             </xpath>
         </field>

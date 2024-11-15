@@ -7,12 +7,13 @@
     'author': 'ALPHAQUEB CONSULTING SAS',
     'depends': ['base', 'purchase', 'purchase_requisition'],
     'data': [
-        'security/purchase_visibility_security.xml',
-        'security/ir.model.access.csv',
-        'views/purchase_order_views.xml',
-        'views/purchase_requisition_views.xml',
-        'views/res_users_views.xml',
+    'security/purchase_visibility_security.xml',
+    'security/ir.model.access.csv',
+    'views/purchase_order_views.xml',
+    'views/purchase_requisition_views.xml',
+    'views/res_users_views.xml',
     ],
+
     'installable': True,
     'application': False,
 }
