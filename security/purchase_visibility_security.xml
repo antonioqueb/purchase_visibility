@@ -5,8 +5,8 @@
         <field name="category_id" ref="base.module_category_purchases"/>
         <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
     </record>
-
-    <!-- Grupo que permite agregar usuarios adicionales -->
+    
+  <!-- Grupo que permite agregar usuarios adicionales -->
     <record id="group_purchase_additional_visibility" model="res.groups">
         <field name="name">Add Additional Visibility</field>
         <field name="category_id" ref="base.module_category_purchases"/>
