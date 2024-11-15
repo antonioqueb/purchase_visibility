@@ -2,7 +2,8 @@
     <record id="view_purchase_requisition_form_inherit" model="ir.ui.view">
         <field name="name">purchase.requisition.form.inherit</field>
         <field name="model">purchase.requisition</field>
-        <field name="inherit_id" ref="purchase_requisition.purchase_requisition_form"/>
+        <!-- Cambia el ID por una vista válida o elimina este atributo si se trata de una nueva vista -->
+        <field name="inherit_id" ref="purchase_requisition.purchase_requisition_tree_view"/> 
         <field name="arch" type="xml">
             <xpath expr="//sheet" position="inside">
                 <group>
