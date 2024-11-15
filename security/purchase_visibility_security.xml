@@ -19,7 +19,11 @@
         <field name="name">Purchase Orders Visibility</field>
         <field name="model_id" ref="purchase.model_purchase_order"/>
         <field name="domain_force">
-            ['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]
+            ['|', 
+             ('create_uid', '=', user.id), 
+             '&', 
+             ('create_uid.additional_visible_users', 'in', user.id),
+             ('create_uid', '!=', 1)]
         </field>
         <field name="global" eval="True"/>
     </record>
@@ -29,7 +33,11 @@
         <field name="name">Purchase Requisitions Visibility</field>
         <field name="model_id" ref="purchase_requisition.model_purchase_requisition"/>
         <field name="domain_force">
-            ['|', ('create_uid', '=', user.id), ('create_uid.additional_visible_users', 'in', user.id)]
+            ['|', 
+             ('create_uid', '=', user.id), 
+             '&', 
+             ('create_uid.additional_visible_users', 'in', user.id),
+             ('create_uid', '!=', 1)]
         </field>
         <field name="global" eval="True"/>
     </record>
